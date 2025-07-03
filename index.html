@@ -1,55 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="portfolio.css">
+  <script src="portfolio.js"></script>
   <title>Maria Dolenko | Portfolio</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background-color: #fdfdfd;
-      color: #333;
-    }
-    header {
-      border-bottom: 2px solid #047685;
-      padding-bottom: 1rem;
-      margin-bottom: 2rem;
-    }
-    h1 {
-      color: #047685;
-    }
-    .project {
-      margin-bottom: 2rem;
-    }
-    .project img {
-      max-width: 100%;
-      border: 1px solid #ddd;
-    }
-  </style>
 </head>
+
 <body>
   <header>
     <h1>Maria Dolenko</h1>
-    <p>HubSpot Developer | Front-End Trainee</p>
-    <p><a href="mailto:mashadolenko@gmail.com">mashadolenko@gmail.com</a> | <a href="https://linkedin.com/in/mariia-dolenko" target="_blank">LinkedIn</a></p>
+    <p>HubSpot Developer | Front-End</p>
   </header>
 
-  <section>
-    <h2>Projects</h2>
+  <nav>
+    <button onclick="showSection('summary')">Career Summary</button>
+    <button onclick="showSection('skills')">Skills</button>
+    <button onclick="showSection('experience')">Experience</button>
+    <button onclick="showSection('education')">Education</button>
+    <button onclick="showSection('courses')">Courses & Learning</button>
+    <button onclick="showSection('portfolio')">Portfolio</button>
+  </nav>
 
-    <div class="project">
-      <h3>Custom HubSpot Module</h3>
-      <img src="module-screenshot.jpg" alt="Screenshot of a HubSpot module">
-      <p>Created a reusable custom HubSpot module for testimonials with dynamic content and responsive layout.</p>
+  <div class="content">
+    <div id="summary" class="section active">
+      <p>HubSpot developer with over 3 years of experience in building websites and custom modules on HubSpot CMS.
+        Previously worked as an SEO specialist for 8 years, managing projects of various scales and niches,
+        growing from a junior to a senior position. Currently focused on developing my front-end skills, with
+        hands-on experience in HTML, CSS, JavaScript, and HubL. Looking for opportunities for professional
+        growth, teamwork, and contributing to meaningful products.</p>
     </div>
-
-    <div class="project">
-      <h3>Full Website Theme</h3>
-      <img src="theme-screenshot.jpg" alt="Screenshot of a theme">
-      <p>Developed a HubSpot website theme from scratch with flexible templates and modern UX patterns.</p>
+    <div id="skills" class="section">
+      <p><strong style="color:#04a0af;">Tech:</strong> HTML5, CSS3, JavaScript (base), HubL, HubSpot CMS</p>
+      <p><strong style="color:#04a0af;">Tools:</strong> HubSpot Design Manager, VS Code, Figma, Adobe, mostly all
+        of the SEO tools</p>
+      <p><strong style="color:#04a0af;">Soft:</strong> Open communicator, team player, self-motivated,
+        detail-oriented.</p>
+      <p><strong style="color:#04a0af;">Languages:</strong> Ukrainian - native, English - upper-intermediate,
+        Spanish - beginner, Deutsch - beginner</p>
     </div>
-  </section>
+    <div id="experience" class="section">
+      <h2 style="color:#04a0af;">Wizer – HubSpot Developer / SEO (USA, Remote, 2022–2025)</h2>
+      <ul class="custom-list">
+        <li>
+          Developed over 20 custom modules for HubSpot CMS, including tabbed interfaces, sliders, accordions,
+          testimonial blocks, pricing tables, dynamic call-to-action sections, and reusable content components for
+          marketing teams
+        </li>
+        <li>
+          Built a fully custom HubSpot theme from scratch, including templates for blog, landing pages, service
+          listings, and multilingual support
+        </li>
+        <li>
+          Refactored and optimized template structure for performance, SEO, and maintainability; introduced modular
+          architecture with flexible sections for marketers to edit without developer involvement
+        </li>
+        <li>
+          Implemented base SEO enhancements, such as meta tags, Open Graph markup, alt text automation, sitemap control,
+          and semantic HTML
+        </li>
+        <li>
+          Collaborated closely with marketers, designers, and other developers to align user experience, branding, and
+          performance requirements across departments
+        </li>
+        <li>
+          Used HubL, HTML, CSS (SASS), and JavaScript to build responsive and accessible UI components, ensuring
+          cross-browser and mobile compatibility
+        </li>
+      </ul>
+      <h2 style="color:#04a0af;">SEO Specialist (Ukraine, In-house, 2015–2022)</h2>
+      <ul class="custom-list">
+        <li>
+          Promoted websites in e-commerce, niche, and highly competitive industries
+        </li>
+        <li>
+          Grew from junior to senior SEO specialist and gained team management experience
+        </li>
+        <li>
+          Developed promotion strategies and worked with analytics, technical SEO, and content
+        </li>
+        <li>
+          Worked on SEO for both white niche and darknet websites
+        </li>
+      </ul>
+    </div>
+    <div id="education" class="section">
+      <h2>Taras Shevchenko National University of Kyiv</h2>
+      <p>2011–2014 – Faculty of Economics, Bachelor’s Degree</p>
+      <p>2014–2016 – Faculty of Economics, Master’s Degree</p>
+    </div>
+    <div id="courses" class="section">
+      <p>Front-End Path, Codecademy (ongoing)</p>
+      <p>HubSpot CMS for Developers, HubSpot Academy</p>
+    </div>
+    <div id="portfolio" class="section">
+      <section id="portfolio" class="portfolio-section">
+        <div class="slider-container">
+          <button class="slider-btn prev">&#10094;</button>
+          <div class="slider">
+            <div class="slide active">
+              <h2 style="color:#04a0af;">Challenge Game</h2>
+              <h3>Core Functionality</h3>
+              <p>Each challenge is designed with a clear goal: to “hack” the system and retrieve specific data — such as
+                a URL, token, or code snippet. Once obtained, this data must be entered into a dedicated input field to
+                validate whether the hack was successful.</p>
+              <p>
+                A dynamic frontend module for a series of cybersecurity challenges where users attempt to "hack" the
+                system to extract specific data (e.g., URL, token, or code snippet).
+              </p>
+              <h3>Key Features:</h3>
+              <ul>
+                <li>Input field for submitting payloads and verifying solutions</li>
+                <li>Multiple timers to simulate real-time pressure (top bar, button, animated tab bar)</li>
+                <li>Tab navigation for switching between challenges</li>
+                <li>Leaderboard showing participant stats and top performers</li>
+              </ul>
+              <h3>My Contributions:</h3>
+              <ul>
+                <li>Built the full <strong>frontend</strong> using <code>HTML</code>, <code>CSS</code>, and
+                  <code>JavaScript</code></li>
+                <li>Implemented layout, styles, transitions, and interactivity</li>
+                <li>Backend and leaderboard logic were handled by other team members</li>
+              </ul>
+              <img src="challenge-game.png" alt="Testimonials module">
+            </div>
+            <div class="slide">
+              <h3>Custom Testimonials Module</h3>
+              <p>This custom re-usable module was designed to display authentic user feedback gathered from various
+                social media platforms.
+                Each card showcases a real comment about the product, highlighting users' appreciation and experience.
+              </p>
+              <h3>Key Features:</h3>
+              <ul>
+                <li>Dynamic content: Each card contains a user’s comment, along with their name, position, platform, and
+                  date</li>
+                <li>Responsive grid layout: The cards are displayed in a flexible, multi-column grid that adapts to
+                  different screen sizes.</li>
+                <li>Variable content height: Since the length of each testimonial varies, I implemented a
+                  JavaScript-based layout engine that
+                  dynamically stacks cards one after another without enforcing uniform height. This avoids whitespace
+                  and ensures optimal use of
+                  vertical space.</li>
+              </ul>
+              <img src="testimonial-grid.png" alt="Testimonials module">
+            </div>
+            <div class="slide">
+              <h3>Card slider Section</h3>
+              <p>Customized slider module - it allows content managers to add an unlimited number of cards without
+                requiring developer support. </p>
+              <h3>Key Features:</h3>
+              <ul>
+                <li>Unlimited cards: The slider dynamically adapts to the number of items added.</li>
+                <li>Smooth transitions: Seamless navigation with left/right arrow controls.</li>
+                <li>Responsive design: Fully optimized for all screen sizes and devices.</li>
+                <li>Reusable component: Easily implemented across different pages or sections.</li>
+              </ul>
+              <img src="img-slider.png" alt="Tabbed services">
+            </div>
+            <div class="slide">
+              <h3>Pricing Table Module</h3>
+              <p>A dynamic pricing table designed to clearly present different subscription plans and
+                help users estimate total costs based on the number of users.</p>
+              <h3>Key Features:</h3>
+              <ul>
+                <li>Pricing cards: Each card displays a plan’s name, features, and base price per user. </li>
+                <li>Interactive calculator: Users can input team size to see real-time total cost for each plan. </li>
+                <li>User guidance: Includes clear CTAs — either to start registration or go directly to checkout. </li>
+                <li>Responsive & user-friendly: Designed to work smoothly on desktop and mobile devices. </li>
+              </ul>
+              <h3>Technologies Used:</h3>
+              <ul>
+                <li>HTML for structure</li>
+                <li>CSS for layout, responsive design, and visual hierarchy</li>
+                <li>JavaScript/HubL for dynamic price calculation and form interaction</li>
+              </ul>
+              <h3>My Role:</h3>
+              <p>I was responsible for the full front-end implementation of the pricing table. </p>
+              <img src="pricing-calculator.png" alt="Pricing table">
+            </div>
+            <div class="slide">
+              <h3>Accordion Module with Tag-Based Filtering</h3>
+              <p>This interactive accordion module was designed to organize a large set of content—such 
+                as courses or informational blocks—in a user-friendly and accessible format.</p>
+              <h3>Key Features:</h3>
+              <ul>
+                <li>Expandable Accordions:<br> Each item expands on click, revealing additional information such as a course 
+                  description or functional details. Includes a clear CTA button that directs users to take action 
+                  (e.g., launch a course or sign up). </li>
+                <li>Tag-Based Filtering: <br> At the top of the module, category tags allow users to filter 
+                  visible accordions by topic without reloading the page. </li>
+                <li>Responsive Layout & Smooth Transitions:<br> The entire module is fully responsive and features smooth 
+                  expand/collapse animations, enhancing the overall user experience. </li>
+              </ul>
+              <h3>My Role:</h3>
+              <p>I handled the complete implementation of this module, including structure, styling, 
+                and filtering logic, using HTML, CSS, and JS. </p>
+              <img src="accordion.png" alt="Accordion">
+            </div>
+          </div>
+          <button class="slider-btn next">&#10095;</button>
+        </div>
+      </section>
+      <div id="imgModal" class="modal" style="display:none;">
+        <span class="close"
+          style="position:absolute; top:10px; right:20px; font-size:40px; cursor:pointer; color:white;">&times;</span>
+        <img id="imgPreview" style="max-width:90%; max-height:90%; margin:auto;" />
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
